@@ -1,0 +1,65 @@
+.sidebar {
+  padding: 0px 10px 20px 0px;
+  transition: width 0.3s ease;
+}
+.sidebar > div:nth-child(1) {
+  padding-top: 0px;
+}
+.sidebar.hidden {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.filterCategory {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  padding: 20px 0px;
+  font-family: Simplon Norm;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   font-family: Simplon Norm, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdownArrow {
+  font-size: 0.8rem;
+}
+
+.dropdownContent {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.dropdownOption {
+  padding: 10px 0px 0px 0px;
+  font-family: Simplon Norm;
+  font-size: 13px;
+  font-weight: 500;
+}

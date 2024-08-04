@@ -1,0 +1,247 @@
+.productList {
+  padding: 0 45px 20px 45px;
+}
+
+.title {
+  font-family: Simplon Norm, sans-serif;
+  font-size: 32px;
+  padding-top: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  line-height: 1.5;
+  padding: 0 15px;
+}
+
+.productListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-family: Simplon Norm, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hideFilterDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemCount {
+  margin-right: 20px;
+}
+
+.hideButton,
+.filterTab {
+  border: none;
+  background: none;
+  font-family: Simplon Norm, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+}
+
+.hideButton {
+  text-decoration: underline;
+  font-family: Adobe Caslon Pro, serif;
+  font-weight: 400;
+  color: #888792;
+}
+
+.recommendedButton {
+  border: none;
+  background: none;
+  font-family: Simplon Norm, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  margin-top: 30px;
+}
+
+.productSection {
+  flex: 1;
+}
+
+.signIn {
+  text-decoration: underline;
+}
+
+.productGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.filterVisible {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.filterHidden {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.productCard {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  cursor: pointer;
+}
+
+.productCard img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.liked .heartIcon path {
+  fill: red;
+  stroke: red;
+}
+
+.productStatusContainer {
+  padding: 10px 0;
+}
+
+.heartContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productStatus {
+  font-size: 12px;
+}
+
+.productName {
+  text-align: start;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.heartIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.heartIcon path {
+  fill: none;
+  stroke: black;
+}
+
+.newProduct {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #000;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.outOfStock .blurredImage {
+  filter: blur(2px);
+}
+
+.stockStatus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 15px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .filterVisible {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .filterHidden {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .hideFilterDiv {
+    display: none;
+  }
+  .productListHeader {
+    justify-content: center;
+    padding: 0;
+    border-bottom: none;
+  }
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .mobileTabContainer {
+    display: flex;
+    width: 100%;
+  }
+
+  .filterTab,
+  .recommendedButton {
+    flex: 1;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background: none;
+    font-family: Simplon Norm, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .filterTab {
+    border-right: 1px solid #ddd;
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
